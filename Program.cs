@@ -1,8 +1,9 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace TwistedPair
 {
-    class Program
+    partial class Program
     {
         static void Main(string[] args)
         {
