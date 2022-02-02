@@ -5,7 +5,7 @@ using System.IO;
 
 namespace TwistedPair
 {
-    internal class ReadColors
+    public class ReadColors : Colors
     {
         public static Colors Read(string path)
         {
@@ -14,7 +14,7 @@ namespace TwistedPair
                 try
                 {
                     string jsonFile = file.ReadToEnd();
-                    Console.WriteLine(jsonFile);
+                    
 
                     var serializerSettings = new JsonSerializerSettings
                     {
