@@ -14,7 +14,7 @@ namespace TwistedPair
                 try
                 {
                     string jsonFile = file.ReadToEnd();
-                    
+
 
                     var serializerSettings = new JsonSerializerSettings
                     {
