@@ -13,9 +13,9 @@ namespace TwistedPair
 
             var jsonValue = Read(@"C:\Users\Tony\source\repos\TwistedPair\coloredPairs.json");
             var jsonReturn = jsonValue;
-            string userInput1 = Console.ReadLine();
+            string userInput = Console.ReadLine();
 
-            switch (userInput1)
+            switch (userInput)
             {
                 case "1":
                     {
@@ -146,10 +146,11 @@ namespace TwistedPair
                     }
                 case "exit":
                     {
-                        Console.WriteLine("Bye");
+                        Console.WriteLine("Bye!");
                         Environment.Exit(0);
                         break;
                     }
+                //default: throw new System.ComponentModel.InvalidEnumArgumentException(nameof(userType), (int)userType, userType.GetType());
             }
 
 

@@ -16,12 +16,12 @@ namespace TwistedPair
                     string jsonFile = file.ReadToEnd();
 
 
-                    var serializerSettings = new JsonSerializerSettings
-                    {
-                        ContractResolver = new CamelCasePropertyNamesContractResolver()
-                    };
+                    //var serializerSettings = new JsonSerializerSettings
+                    //{
+                    //    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                    //};
 
-                    return JsonConvert.DeserializeObject<Colors>(jsonFile, serializerSettings);
+                    return JsonConvert.DeserializeObject<Colors>(jsonFile/*, serializerSettings*/);
                 }
                 catch (Exception)
                 {
