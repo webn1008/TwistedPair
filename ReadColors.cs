@@ -9,19 +9,13 @@ namespace TwistedPair
     {
         public static Colors Read(string path)
         {
-            using (StreamReader file = new StreamReader(@"C:\Users\Tony\Documents\coloredPairs.json"))
+            using (StreamReader file = new StreamReader(@"C:\Users\Tony\source\repos\TwistedPair\coloredPairs.json"))
             {
                 try
                 {
                     string jsonFile = file.ReadToEnd();
 
-
-                    //var serializerSettings = new JsonSerializerSettings
-                    //{
-                    //    ContractResolver = new CamelCasePropertyNamesContractResolver()
-                    //};
-
-                    return JsonConvert.DeserializeObject<Colors>(jsonFile/*, serializerSettings*/);
+                    return JsonConvert.DeserializeObject<Colors>(jsonFile);
                 }
                 catch (Exception)
                 {

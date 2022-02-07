@@ -6,27 +6,23 @@ namespace TwistedPair
     {
         static void Main(string[] args)
         {
-
-
+            
             Console.WriteLine("Please enter a number between 1 and 25.");
 
 
             var jsonValue = Read(@"C:\Users\Tony\source\repos\TwistedPair\coloredPairs.json");
             var jsonReturn = jsonValue;
             string userInput = Console.ReadLine();
-
             switch (userInput)
             {
                 case "1":
                     {
                         Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[0]);
-                        //Console.WriteLine(jsonReturn.SecondColor[0]);
                         break;
                     }
                 case "2":
                     {
                         Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[0]);
-                        //Console.WriteLine(jsonReturn.SecondColor[1]);
                         break;
                     }
                 case "3":
@@ -144,17 +140,17 @@ namespace TwistedPair
                         Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[4]);
                         break;
                     }
-                case "exit":
+                //case "exit":
+                //    {
+                //        Console.WriteLine("Bye!");
+                //        Environment.Exit(0);
+                //        break;
+                //    }
+                default:
                     {
-                        Console.WriteLine("Bye!");
-                        Environment.Exit(0);
-                        break;
+                        throw new NotImplementedException("Only numbers between 1 and 25 are accepted");
                     }
-                //default: throw new System.ComponentModel.InvalidEnumArgumentException(nameof(userType), (int)userType, userType.GetType());
             }
-
-
-
 
         }
     }
