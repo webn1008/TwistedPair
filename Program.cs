@@ -6,151 +6,153 @@ namespace TwistedPair
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Please enter a number between 1 and 25.");
-
-
-            var jsonValue = Read(@"C:\Users\Tony\source\repos\TwistedPair\coloredPairs.json");
-            var jsonReturn = jsonValue;
-            string userInput = Console.ReadLine();
-            switch (userInput)
+            string userInput;
+            do
             {
-                case "1":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[0]);
-                        break;
-                    }
-                case "2":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[0]);
-                        break;
-                    }
-                case "3":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[2]);
-                        break;
-                    }
-                case "4":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[3]);
-                        break;
-                    }
-                case "5":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[4]);
-                        break;
-                    }
-                case "6":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[1] + ", " + jsonReturn.SecondColor[0]);
-                        break;
-                    }
-                case "7":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[1] + ", " + jsonReturn.SecondColor[1]);
-                        break;
-                    }
-                case "8":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[1] + ", " + jsonReturn.SecondColor[2]);
-                        break;
-                    }
-                case "9":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[1] + ", " + jsonReturn.SecondColor[3]);
-                        break;
-                    }
-                case "10":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[1] + ", " + jsonReturn.SecondColor[4]);
-                        break;
-                    }
-                case "11":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[2] + ", " + jsonReturn.SecondColor[0]);
-                        break;
-                    }
-                case "12":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[2] + ", " + jsonReturn.SecondColor[1]);
-                        break;
-                    }
-                case "13":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[2] + ", " + jsonReturn.SecondColor[2]);
-                        break;
-                    }
-                case "14":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[2] + ", " + jsonReturn.SecondColor[3]);
-                        break;
-                    }
-                case "15":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[2] + ", " + jsonReturn.SecondColor[4]);
-                        break;
-                    }
-                case "16":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[3] + ", " + jsonReturn.SecondColor[0]);
-                        break;
-                    }
-                case "17":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[3] + ", " + jsonReturn.SecondColor[1]);
-                        break;
-                    }
-                case "18":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[3] + ", " + jsonReturn.SecondColor[2]);
-                        break;
-                    }
-                case "19":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[3] + ", " + jsonReturn.SecondColor[3]);
-                        break;
-                    }
-                case "20":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[3] + ", " + jsonReturn.SecondColor[4]);
-                        break;
-                    }
-                case "21":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[0]);
-                        break;
-                    }
-                case "22":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[1]);
-                        break;
-                    }
-                case "23":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[2]);
-                        break;
-                    }
-                case "24":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[3]);
-                        break;
-                    }
-                case "25":
-                    {
-                        Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[4]);
-                        break;
-                    }
-                //case "exit":
-                //    {
-                //        Console.WriteLine("Bye!");
-                //        Environment.Exit(0);
-                //        break;
-                //    }
-                default:
-                    {
-                        throw new NotImplementedException("Only numbers between 1 and 25 are accepted");
-                    }
-            }
+                Console.WriteLine("Please enter a number between 1 and 25.");
+
+                userInput = Console.ReadLine();
+                var jsonValue = Read(@"C:\Users\Tony\source\repos\TwistedPair\coloredPairs.json");
+                var jsonReturn = jsonValue;
+
+                switch (userInput)
+                {
+                    case "1":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[0]);
+                            break;
+                        }
+                    case "2":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[0]);
+                            break;
+                        }
+                    case "3":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[2]);
+                            break;
+                        }
+                    case "4":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[3]);
+                            break;
+                        }
+                    case "5":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[0] + ", " + jsonReturn.SecondColor[4]);
+                            break;
+                        }
+                    case "6":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[1] + ", " + jsonReturn.SecondColor[0]);
+                            break;
+                        }
+                    case "7":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[1] + ", " + jsonReturn.SecondColor[1]);
+                            break;
+                        }
+                    case "8":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[1] + ", " + jsonReturn.SecondColor[2]);
+                            break;
+                        }
+                    case "9":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[1] + ", " + jsonReturn.SecondColor[3]);
+                            break;
+                        }
+                    case "10":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[1] + ", " + jsonReturn.SecondColor[4]);
+                            break;
+                        }
+                    case "11":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[2] + ", " + jsonReturn.SecondColor[0]);
+                            break;
+                        }
+                    case "12":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[2] + ", " + jsonReturn.SecondColor[1]);
+                            break;
+                        }
+                    case "13":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[2] + ", " + jsonReturn.SecondColor[2]);
+                            break;
+                        }
+                    case "14":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[2] + ", " + jsonReturn.SecondColor[3]);
+                            break;
+                        }
+                    case "15":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[2] + ", " + jsonReturn.SecondColor[4]);
+                            break;
+                        }
+                    case "16":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[3] + ", " + jsonReturn.SecondColor[0]);
+                            break;
+                        }
+                    case "17":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[3] + ", " + jsonReturn.SecondColor[1]);
+                            break;
+                        }
+                    case "18":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[3] + ", " + jsonReturn.SecondColor[2]);
+                            break;
+                        }
+                    case "19":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[3] + ", " + jsonReturn.SecondColor[3]);
+                            break;
+                        }
+                    case "20":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[3] + ", " + jsonReturn.SecondColor[4]);
+                            break;
+                        }
+                    case "21":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[0]);
+                            break;
+                        }
+                    case "22":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[1]);
+                            break;
+                        }
+                    case "23":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[2]);
+                            break;
+                        }
+                    case "24":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[3]);
+                            break;
+                        }
+                    case "25":
+                        {
+                            Console.WriteLine(jsonReturn.FirstColor[4] + ", " + jsonReturn.SecondColor[4]);
+                            break;
+                        }
+                    default:
+                        {
+                            if(userInput != "exit" && int.Parse(userInput) > 1 || int.Parse(userInput) < 25)
+                            {
+                                Console.WriteLine("Number must be between 1-25, otherwise type exit to quit");
+                            }
+                            break;
+                        }
+                }
+            } while (userInput != "exit");
+
 
         }
     }
