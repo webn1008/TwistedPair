@@ -151,7 +151,7 @@ namespace TwistedPair
                         {
                             if(userInput != "exit" || int.Parse(userInput) > 1 || int.Parse(userInput) < 25)
                             {
-                                Console.WriteLine("Number must be between 1-25\n");
+                                Console.WriteLine("Only numbers between 1 and 25 can be used.\n");
                             }
                             break;
                         }
