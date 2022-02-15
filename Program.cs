@@ -12,7 +12,7 @@ namespace TwistedPair
                 Console.WriteLine("Please enter a number between 1 and 25, or type 'exit' to quit.\n");
 
                 userInput = Console.ReadLine();
-                var jsonValue = Read(@"C:\Users\Tony\source\repos\TwistedPair\coloredPairs.json");
+                var jsonValue = Read(@"coloredPairs.json");
                 var jsonReturn = jsonValue;
 
                 switch (userInput)
