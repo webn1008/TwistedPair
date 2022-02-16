@@ -8,7 +8,7 @@ namespace TwistedPair
     {
         public static Colors Read(string path)
         {
-            using (StreamReader file = new StreamReader(@"coloredPairs.json"))
+            using (StreamReader file = new StreamReader(@".\coloredPairs.json"))
             {
                 try
                 {

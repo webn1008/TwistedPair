@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace TwistedPair
 {
@@ -11,8 +12,8 @@ namespace TwistedPair
             {
                 Console.WriteLine("Please enter a number between 1 and 25, or type 'exit' to quit.\n");
 
-                userInput = Console.ReadLine();
-                var jsonValue = Read(@"coloredPairs.json");
+                userInput = Console.ReadLine();                
+                var jsonValue = Read(@".\coloredPairs.json");
                 var jsonReturn = jsonValue;
 
                 switch (userInput)
