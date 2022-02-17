@@ -5,8 +5,6 @@ namespace TwistedPair
 {
     public class Colors
     {
-        public Colors() { }
-
         [JsonProperty("firstColor")]
         public List<string> FirstColor { get; set; }
 
