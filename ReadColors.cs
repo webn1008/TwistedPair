@@ -4,7 +4,7 @@ using System.IO;
 
 namespace TwistedPair
 {
-    public class ReadColors
+    public class ReadColors : Colors
     {
         protected static string fileName;
 
