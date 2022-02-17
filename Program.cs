@@ -6,6 +6,8 @@ namespace TwistedPair
     {
         static void Main(string[] args)
         {
+            var jsonFile = @"\coloredPairs.json";
+            ReadColors read = new(jsonFile);
             string userInput;
 
             do
@@ -13,8 +15,9 @@ namespace TwistedPair
                 Console.WriteLine("Please enter a number between 1 and 25, or type 'exit' to quit.\n");
 
                 userInput = Console.ReadLine();
-                string upperString = userInput.ToUpper();
-                var jsonValue = Read(fileName);
+
+                var jsonValue = read.Read();
+                var jsonReturn = jsonValue;
 
                 switch (upperString)
                 {
