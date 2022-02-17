@@ -15,11 +15,10 @@ namespace TwistedPair
                 Console.WriteLine("Please enter a number between 1 and 25, or type 'exit' to quit.\n");
 
                 userInput = Console.ReadLine();
+                
+                var jsonValue = Read(fileName);
 
-                var jsonValue = read.Read();
-                var jsonReturn = jsonValue;
-
-                switch (upperString)
+                switch (userInput.ToLower())
                 {
                     case "1":
                         {
@@ -149,11 +148,12 @@ namespace TwistedPair
                     case "exit":
                         {
                             Console.WriteLine("Goodbye!");
+                            Environment.Exit(0);
                             break;
                         }
                     default:
                         {
-                            if(upperString != "exit" || int.Parse(upperString) > 1 || int.Parse(upperString) < 25)
+                            if(int.Parse(userInput) > 1 || int.Parse(userInput) < 25)
                             {
                                 Console.WriteLine("Only numbers between 1 and 25 can be used.\n");
                             }
