@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Linq;
 
 namespace TwistedPair
 {
@@ -10,14 +11,27 @@ namespace TwistedPair
 
         public static Colors Read(string path)
         {
-
-            string fileName = "coloredPairs.json";
-            _ = Path.Combine(Environment.CurrentDirectory, @"net5.0\", fileName);
-            using (StreamReader file = new StreamReader(fileName))
+            try
             {
-                string jsonFile = file.ReadToEnd();
+                string fileName = "coloredPairs.json";
 
-                return JsonConvert.DeserializeObject<Colors>(jsonFile);
+                path = Path.Combine(Environment.CurrentDirectory, @"net5.0\", fileName);
+                using (StreamReader file = new StreamReader(fileName))
+                {
+                    string jsonFile = file.ReadToEnd();
+
+                    return JsonConvert.DeserializeObject<Colors>(jsonFile);
+                }
+            }
+            catch (Exception ex)
+            {
+                ReportError(ex);
+                throw;
+            }
+
+            static void ReportError(Exception? ex)
+            {
+                 throw new InvalidOperationException("File not found. Program will close.");
             }
         }
     }
