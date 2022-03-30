@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+
 
 namespace TwistedPair
 {
@@ -8,190 +8,176 @@ namespace TwistedPair
 
         static void Main(string[] args)
         {
-
+            
+            var logger = new Logger();
+            
             string userInput;
 
             do
             {
-                Console.WriteLine("Please enter a number between 1 and 25, or type 'exit' to quit.\n");
+                Console.WriteLine("Please enter a number between 1 and 25 for colored pairs, or type 'exit' to quit.\n");
 
                 userInput = Console.ReadLine();
+                
+
 
                 var jsonValue = Read(fileName);
-                var logger = new Logger();
 
-                switch (userInput.ToLower().Trim())
-                {
-                    case "1":
+                    switch (userInput.ToLower().Trim())
+                    {
+                        case "1":
+                            {
+                                PrintPairs(logger, userInput, jsonValue.FirstColor[0], jsonValue.SecondColor[0]);
+                                break;
+                            }
+                        case "2":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[0] + ", " + jsonValue.SecondColor[0] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[0] + ", " + jsonValue.SecondColor[0]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[0], jsonValue.SecondColor[1]);
                             break;
                         }
-                    case "2":
+                        case "3":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[0] + ", " + jsonValue.SecondColor[1] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[0] + ", " + jsonValue.SecondColor[1]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[0], jsonValue.SecondColor[2]);
                             break;
                         }
-                    case "3":
+                        case "4":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[0] + ", " + jsonValue.SecondColor[2] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[0] + ", " + jsonValue.SecondColor[2]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[0], jsonValue.SecondColor[3]);
                             break;
                         }
-                    case "4":
+                        case "5":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[0] + ", " + jsonValue.SecondColor[3] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[0] + ", " + jsonValue.SecondColor[3]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[0], jsonValue.SecondColor[4]);
                             break;
                         }
-                    case "5":
+                        case "6":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[0] + ", " + jsonValue.SecondColor[4] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[0] + ", " + jsonValue.SecondColor[4]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[1], jsonValue.SecondColor[0]);
                             break;
                         }
-                    case "6":
+                        case "7":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[1] + ", " + jsonValue.SecondColor[0] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[1] + ", " + jsonValue.SecondColor[0]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[1], jsonValue.SecondColor[1]);
                             break;
                         }
-                    case "7":
+                        case "8":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[1] + ", " + jsonValue.SecondColor[1] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[1] + ", " + jsonValue.SecondColor[1]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[1], jsonValue.SecondColor[2]);
                             break;
                         }
-                    case "8":
+                        case "9":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[1] + ", " + jsonValue.SecondColor[2] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[1] + ", " + jsonValue.SecondColor[2]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[1], jsonValue.SecondColor[3]);
                             break;
                         }
-                    case "9":
+                        case "10":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[1] + ", " + jsonValue.SecondColor[3] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[1] + ", " + jsonValue.SecondColor[3]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[1], jsonValue.SecondColor[4]);
                             break;
                         }
-                    case "10":
+                        case "11":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[1] + ", " + jsonValue.SecondColor[4] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[1] + ", " + jsonValue.SecondColor[4]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[2], jsonValue.SecondColor[0]);
                             break;
                         }
-                    case "11":
+                        case "12":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[2] + ", " + jsonValue.SecondColor[0] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[2] + ", " + jsonValue.SecondColor[0]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[2], jsonValue.SecondColor[1]);
                             break;
                         }
-                    case "12":
+                        case "13":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[2] + ", " + jsonValue.SecondColor[1] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[2] + ", " + jsonValue.SecondColor[1]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[2], jsonValue.SecondColor[2]);
                             break;
                         }
-                    case "13":
+                        case "14":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[2] + ", " + jsonValue.SecondColor[2] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[2] + ", " + jsonValue.SecondColor[2]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[2], jsonValue.SecondColor[3]);
                             break;
                         }
-                    case "14":
+                        case "15":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[2] + ", " + jsonValue.SecondColor[3] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[2] + ", " + jsonValue.SecondColor[3]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[2], jsonValue.SecondColor[4]);
                             break;
                         }
-                    case "15":
+                        case "16":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[2] + ", " + jsonValue.SecondColor[4] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[2] + ", " + jsonValue.SecondColor[4]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[3], jsonValue.SecondColor[0]);
                             break;
                         }
-                    case "16":
+                        case "17":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[3] + ", " + jsonValue.SecondColor[0] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[3] + ", " + jsonValue.SecondColor[0]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[3], jsonValue.SecondColor[1]);
                             break;
                         }
-                    case "17":
+                        case "18":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[3] + ", " + jsonValue.SecondColor[1] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[3] + ", " + jsonValue.SecondColor[1]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[3], jsonValue.SecondColor[2]);
                             break;
                         }
-                    case "18":
+                        case "19":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[3] + ", " + jsonValue.SecondColor[2] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[3] + ", " + jsonValue.SecondColor[2]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[3], jsonValue.SecondColor[3]);
                             break;
                         }
-                    case "19":
+                        case "20":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[3] + ", " + jsonValue.SecondColor[3] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[3] + ", " + jsonValue.SecondColor[3]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[3], jsonValue.SecondColor[4]);
                             break;
                         }
-                    case "20":
+                        case "21":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[3] + ", " + jsonValue.SecondColor[4] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[3] + ", " + jsonValue.SecondColor[4]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[4], jsonValue.SecondColor[0]);
                             break;
                         }
-                    case "21":
+                        case "22":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[4] + ", " + jsonValue.SecondColor[0] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[4] + ", " + jsonValue.SecondColor[0]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[4], jsonValue.SecondColor[1]);
                             break;
                         }
-                    case "22":
+                        case "23":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[4] + ", " + jsonValue.SecondColor[1] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[4] + ", " + jsonValue.SecondColor[1]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[4], jsonValue.SecondColor[2]);
                             break;
                         }
-                    case "23":
+                        case "24":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[4] + ", " + jsonValue.SecondColor[2] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[4] + ", " + jsonValue.SecondColor[2]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[4], jsonValue.SecondColor[3]);
                             break;
                         }
-                    case "24":
+                        case "25":
                         {
-                            Console.WriteLine(jsonValue.FirstColor[4] + ", " + jsonValue.SecondColor[3] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[4] + ", " + jsonValue.SecondColor[3]);
+                            PrintPairs(logger, userInput, jsonValue.FirstColor[4], jsonValue.SecondColor[4]);
                             break;
                         }
-                    case "25":
-                        {
-                            Console.WriteLine(jsonValue.FirstColor[4] + ", " + jsonValue.SecondColor[4] + "\n");
-                            logger.Log(userInput + ": " + jsonValue.FirstColor[4] + ", " + jsonValue.SecondColor[4]);
-                            break;
-                        }
-                    case "exit":
+                        case "exit":
                         {
                             Console.WriteLine("Goodbye!");
                             logger.Log(userInput);
-                            Environment.Exit(0);
+                            
                             break;
                         }
-                    default:
+                        default:
                         {
                             if (userInput != "exit" || int.Parse(userInput) > 1 || int.Parse(userInput) < 25)
                             {
                                 Console.WriteLine("Only numbers between 1 and 25 can be used.\n");
                                 logger.Log(userInput);
                             }
+
                             break;
                         }
-                }
+                    }
+                
             } while (userInput != "exit");
- 
         }
+
+        private static void PrintPairs(Logger logger, string userInput, string firstColor, string secondColor)
+        {
+            Console.WriteLine(firstColor + ", " + secondColor + "\n");
+            logger.Log(userInput + ": " + firstColor + ", " + secondColor);
+        }
+
     }
 }
 

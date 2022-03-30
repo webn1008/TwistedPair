@@ -15,7 +15,7 @@ namespace TwistedPair
             {
                 string fileName = "coloredPairs.json";
 
-                path = Path.Combine(Environment.CurrentDirectory, @"net5.0\", fileName);
+                path = Path.Combine(Environment.CurrentDirectory, @"TwistedPair\", fileName);
                 using (StreamReader file = new StreamReader(fileName))
                 {
                     string jsonFile = file.ReadToEnd();
@@ -31,7 +31,7 @@ namespace TwistedPair
 
             static void ReportError(Exception? ex)
             {
-                 throw new InvalidOperationException("File not found. Program will close.");
+                 throw new InvalidOperationException("File not found, please verify the location and name of the file. This is typically in TwistedPair\\bin\\Debug\\net5.0, or TwistedPair\\bin\\Release\\TwistedPair, and named coloredPairs.json. Program will close.");
             }
         }
     }
